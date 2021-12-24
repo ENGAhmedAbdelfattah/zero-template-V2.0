@@ -1,0 +1,83 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+// Component
+%before-after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-color: $main-color;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: -1;
+}
+
+.main-h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 20px;
+  margin: 0 auto;
+  // background-color: white;
+  text-transform: uppercase;
+  border: 3px solid black;
+  font-weight: bold;
+  font-size: 22pt;
+  line-height: 1;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 10;
+  &::before {
+    @extend %before-after;
+    left: -30px;
+  }
+  &::after {
+    @extend %before-after;
+    right: -30px;
+  }
+  &:hover {
+    border: 3px solid white;
+    color: white;
+    transition: color 0.3s 0.7s, border 0.3s 0.7s;
+    &::before {
+      transition: left 0.3s;
+      left: 0;
+      @include m.animate-before-after();
+    }
+    &::after {
+      transition: right 0.3s;
+      right: 0;
+      @include m.animate-before-after();
+    }
+  }
+}
+
+// dont forget put position relative in parent
+.spikes {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  .arrow {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: {
+      top: 0 solid transparent;
+      bottom: 20px solid $main-background;
+      right: 20px solid transparent;
+      left: 20px solid transparent;
+    }
+  }
+}
+// Component

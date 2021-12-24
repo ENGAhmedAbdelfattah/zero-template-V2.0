@@ -1,0 +1,45 @@
+section.pricing-plans(id="pricingplans")
+  img(src="image/dots.png" alt="dots")
+  img(src="image/dots.png" alt="dots")
+  .container 
+    h2.main-h2 PRICING PLANS
+    .box
+      -var head_price = ["Basic","Advanced","Professional"]
+      -var image = ["hosting-basic" ,"hosting-advanced", "hosting-professional"]
+      -var price = [15,25, 45]
+      -var li_word1 = ["10", "20", "50"]
+      -var li_word2 = ["5","10","20"]
+      -var li_word3 = ["2","5","10"]
+      -var li_word4 = ["4","8","20"]
+        - for (var f = 0 ; f < 3 ; f++)
+          if f != 1
+            .item
+              .content
+                h3 #{head_price[f]}
+                .image
+                  img(src="image/" + image[f] + ".png" alt= image[f])
+                p $#{price[f]}
+                span Per Month
+              ul 
+                li #{li_word1[f]}GB HDD Space
+                li #{li_word2[f]} Email Addresses
+                li #{li_word3[f]} Subdomains
+                li #{li_word4[f]} Databases
+                li #{head_price[f]}
+              button Choose Plan
+          else 
+            .item
+              .popular Most Popular
+              .content
+                h3 #{head_price[f]}
+                .image
+                  img(src="image/" + image[f] + ".png" alt= image[f])
+                p $#{price[f]}
+                span Per Month
+              ul 
+                li #{li_word1[f]}GB HDD Space
+                li #{li_word2[f]} Email Addresses
+                li #{li_word3[f]} Subdomains
+                li #{li_word4[f]} Databases
+                li #{head_price[f]}
+              a(href="#"): button(type="button") Choose Plan

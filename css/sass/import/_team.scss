@@ -1,0 +1,117 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+section.team-members {
+  padding: $main-padding 0;
+  background-color: white;
+  .container {
+    padding: 0;
+    .box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 300px);
+      gap: 80px;
+      justify-content: center;
+      padding-top: $main-padding;
+      .item {
+        display: flex;
+        align-items: center;
+        background-color: $main-background;
+        border-radius: 15px;
+        position: relative;
+        height: 500px;
+        z-index: 0;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
+          background-image: linear-gradient(
+            to left,
+            #e4e4e4 50%,
+            transparent 50%
+          );
+          background-size: 200% 100%;
+          background-position: left bottom;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: -1;
+          transition: $main-duration;
+        }
+        &:hover {
+          &::before {
+            background-position: right bottom;
+          }
+          .image {
+            -webkit-filter: grayscale(1);
+                    filter: grayscale(1);
+          }
+          .content {
+            .text {
+              h3 {
+                color: #777;
+              }
+            }
+          }
+        }
+        .image {
+          width: 100%;
+          height: 300px;
+          border-radius: 15px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(-20%, 25%);
+          overflow: hidden;
+          transition: $main-duration;
+          @media (max-width: 991.98px) {
+            padding-left: 40px;
+          }
+          img {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 15px;
+          }
+        }
+        .content {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          padding: 20px;
+          .social {
+            display: flex;
+            flex-direction: column;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            height: 80%;
+            justify-content: center;
+            align-items: center;
+            i {
+              display: block;
+              padding: 20px 2px;
+              color: $prag-color2;
+              transition: $main-duration;
+              &:hover {
+                color: $main-color;
+              }
+            }
+          }
+          .text {
+            align-self: flex-start;
+            h3 {
+              font-weight: bold;
+              font-size: 22px;
+              color: $main-color;
+              transition: $main-duration;
+            }
+          }
+        }
+      }
+    }
+  }
+}

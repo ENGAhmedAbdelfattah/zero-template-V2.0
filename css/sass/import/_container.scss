@@ -1,0 +1,20 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  /* small */
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  /* medium */
+  @media (min-width: 992px) {
+    width: 975px;
+  }
+  /* large */
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}

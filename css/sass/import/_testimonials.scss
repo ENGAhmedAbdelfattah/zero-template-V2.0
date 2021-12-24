@@ -1,0 +1,74 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+section.testimonials {
+  padding: $main-padding 0;
+  background-color: $main-background;
+  .container {
+    .box {
+      padding-top: $main-padding;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
+      justify-content: space-between;
+      @for $i from 1 through 6 {
+        .item#{$i} {
+          background-color: white;
+          padding: 10px 15px 15px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+          border-radius: 6px;
+          position: relative;
+          &::before {
+            content: "";
+            width: 85px;
+            height: 85px;
+            background-image: url(../image/avatar-0#{$i}.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 8px solid $main-background;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(10%, -50%);
+            z-index: 1;
+          }
+          .content {
+            background-color: white;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            display: box;
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+            -webkit-box-orient: vertical;
+            box-orient: vertical;
+            line-height: 16px; /* Height taken by one line */
+            max-height: 230px; /* (Number of lines you want visible) * (line-height) */
+            h3 {
+              font-size: 19px;
+              font-weight: bold;
+            }
+            p {
+              color: $prag-color2;
+              font-size: 16px;
+              font-weight: 400;
+            }
+            .icon {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding: 5px 0;
+              i.filled-icon {
+                padding: 0 2px;
+                color: #ffc107;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

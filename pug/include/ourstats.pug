@@ -1,0 +1,12 @@
+section.our-awesome-stats(id="stats")
+  .container 
+    h2 Our Awesome Stats
+    .box
+      -var stats_icon = ["far fa-user", "fas fa-code", "fas fa-globe-asia", "far fa-money-bill-alt"]
+      -var stats_num = ["150", "135", "50", "500"]
+      -var stats_span = ["Clients", "Projects", "Countries", "Money"]
+      - for (g=0 ; g < stats_span.length ; g ++)
+        .item
+          i(class= stats_icon[g] + " "+ "fa-2x fa-fw" )
+          p #{stats_num[g]}
+          span #{stats_span[g]}

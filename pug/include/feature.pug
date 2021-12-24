@@ -1,0 +1,15 @@
+section.features(id="features")
+  .container 
+    h2.main-h2 FEATURES
+    .box
+      -var head = ["Quality", "Time", "Passion"]
+      -var prag = ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima"]
+      - for (var y = 1; y <= 3; y++)
+        div(class= "item" + y) 
+          .image
+            img(src="image/features-0" + y + ".jpg" alt="features-0" + y)
+          .content 
+            h3 #{head[y - 1]}
+            p #{prag[y - 1]}
+          a(href="#")
+            bottom More

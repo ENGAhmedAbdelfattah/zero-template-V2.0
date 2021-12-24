@@ -1,0 +1,144 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+/* START GROBAL RULES */
+$main-color: #21a3f6;
+$prag-color: #dfe4e8;
+$prag-color2: #777;
+$main-duration: 0.3s;
+$height-header: 72px;
+$main-padding: 100px;
+$main-background: #ececec;
+
+@use "import/mixin.scss"as m;
+@import "import/compont";
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-button:single-button {
+  background-color: rgb(10, 198, 204);
+  border: 3px solid blue;
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 1px solid rgb(81, 5, 100);
+}
+
+::-webkit-scrollbar-track {
+  background-color: cyan;
+  box-shadow: 0 0 10px #ddd inset;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgb(0, 174, 255);
+}
+
+::-webkit-resizer {
+  background-image: linear-gradient(
+    315deg,
+    $main-color 25%,
+    rgb(0, 174, 255) 25%,
+    rgb(0, 174, 255) 30%,
+    rgb(0, 225, 255) 30%,
+    rgb(0, 225, 255) 40%,
+    rgb(0, 255, 242) 40%,
+    rgb(0, 255, 242) 50%,
+    transparent 50%
+  );
+  width: 1px;
+  height: 1px;
+}
+
+::selection {
+  background-color: rgb(170, 170, 170);
+  color: white;
+}
+html {
+  scrollbar-color: blue cyan;
+  scrollbar-width: thin;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  caret-color: $main-color;
+}
+
+@import "import/container";
+/* END GROBAL RULES */
+
+//- START HEADER
+@import "import/header";
+//- END HEADER SECTION
+//- -------------------------------------
+//- STRAT LANDING SECTION
+@import "import/landing";
+//- END LANDING SECTION
+//- -------------------------------------
+//- START ARTICLES SECTION
+@import "import/article";
+
+//- END ARTICLES SECTION
+//- -------------------------------------
+//- START GALLERY
+@import "import/gallery";
+//- END GALLERY
+//- -------------------------------------
+//- START FEATURES
+@import "import/feature";
+//- END FEATURES
+//- ----------------------------------
+//- START TESTIMONIALS
+@import "import/testimonials";
+//- END TESTIMONIALS
+//- -------------------------------------
+//- START TEAM MEMBERS
+@import "import/team";
+//- END TEAM MEMBERS
+//- ----------------------------------
+//- START SERVICES
+@import "import/services";
+//- END SERVICES
+//- ----------------------------------
+//- START OUR SKILLS
+@import "import/ourskills";
+//- END OUR SKILLS
+//- ----------------------------------
+//- START HOW IT WORKS
+@import "import/howworks";
+//- END HOW IT WORKS
+//- ----------------------------------
+//- START LATEST EVENTS
+@import "import/latestevents";
+//- END LATEST EVENTS
+//- ----------------------------------
+//- START PRICING PLANS
+@import "import/pricingplan";
+//- END PRICING PLANS
+//- ----------------------------------
+//- START TOP VIDEOS
+@import "import/topvideos";
+//- END TOP VIDEOS
+//- ----------------------------------
+//- START OUR AWESOME STATS
+@import "import/ourstats";
+//- END OUR AWESOME STATS
+//- ----------------------------------
+//- START A DISCOUNT
+@import "import/discount";
+//- END A DISCOUNT
+//- ----------------------------------
+//- START FOOTER
+@import "import/footer";
+//- END TFOOTER
+//- ----------------------------------

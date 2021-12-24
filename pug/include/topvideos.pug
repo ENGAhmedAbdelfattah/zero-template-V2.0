@@ -1,0 +1,20 @@
+section.top-videos(id="topvideos")
+  .container 
+    h2.main-h2 TOP VIDEOS
+    .box
+      .content 
+        .head
+          h3 Top Videos
+          i(class="fas fa-random")
+        .box-item
+          -var video_pra = ["How To Create Sub Domain", "Playing With The DNS", "Everything About The Virtual Hosts", "How To Monitor Your Website", "Uncharted Beating The Last Boss", "Ys Oath In Felghana Overview", "Ys Series All Games Ending"]
+          -var video_time = ["05:18", "03:18", "05:25", "04:16", "07:48", "03:12", "08:10"]
+          -for (var h = 0 ; h < video_pra.length ; h ++)
+            ul.item
+              li
+                p #{video_pra[h]}
+                time #{video_time[h]}
+      .video
+        .image 
+          img(src="image/video-preview.jpg" alt="work-steps")
+        p Everything About The Virtual Hosts

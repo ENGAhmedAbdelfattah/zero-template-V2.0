@@ -1,0 +1,63 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+* {
+  box-sizing: border-box;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  text-overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 12pt;
+  cursor: url(../cursor/Arrow.cur), auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: url(../cursor/button_down.cur), auto;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+ul {
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  resize: vertical;
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+input[type="submit"],
+button {
+  display: block;
+  border: none;
+  outline: none;
+}
+
+input[type="submit"],
+button {
+  cursor: url(../cursor/button_down.cur), auto;
+  background-color: transparent;
+}

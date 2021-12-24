@@ -1,0 +1,30 @@
+mixin icon-list(listIcone,listName,idList)
+  each element in listIcone
+    if x == False
+      -var x = 0
+    a(href = "#" + idList[x]): li #[i(class = element fa-fw)] #{listName[x]}
+    -var x = x + 1
+//- or by index ex each element,index in listIcone
+  listName[index]
+
+mixin item-article(imagepath,imagetab,h3,p)
+  .image 
+    img(src=imagepath, alt=imagetab)
+  .text
+    h3 #{h3}
+    p #{p}
+  .more
+    a Read More
+    i(class="fas fa-long-arrow-alt-right")
+
+mixin testimonials-item(i,h3,p1,star,p2)
+  div(class="item" + i)
+    .content
+      h3 #{h3}
+      p #{p1}
+      .icon 
+        - for(w = 1 ; w <= star; w++)
+          i(class="filled-icon fas fa-star")
+        - for(w = 1 ; w <= (5 - star) ; w++)
+          i(class="far fa-star")
+      p #{p2}

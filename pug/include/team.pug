@@ -1,0 +1,22 @@
+section.team-members(id="teammembers")
+  .container 
+    h2.main-h2 TEAM MEMBERS
+    .box
+      -var image_team = ["team-01.jpg","team-02.jpg","team-03.jpg","team-04.jpg","team-05.jpg","team-06.jpg","team-07.jpg","team-08.jpg"]
+      -var name = ["Name","Name","Name","Name","Name","Name","Name","Name"]
+      -var descripton = ["Simple Short Description","Simple Short Description","Simple Short Description","Simple Short Description","Simple Short Description","Simple Short Description","Simple Short Description","Simple Short Description"]
+      -var link_social = ["id1","id2","id3","id4"]
+      each img,index in image_team
+        .item
+          .image
+            img(src="image/" + img, alt=img)
+          .content
+            .social
+              -var i = 0;
+              a(href="#" + link_social[i++]): i(class="fab fa-facebook-f")
+              a(href="#" + link_social[i++]): i(class="fab fa-twitter")
+              a(href="#" + link_social[i++]): i(class="fab fa-linkedin-in")
+              a(href="#" + link_social[i++]): i(class="fab fa-youtube")
+            .text
+              h3 #{name[index]}
+              p #{descripton[index]}

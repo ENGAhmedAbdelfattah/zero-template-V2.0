@@ -1,0 +1,17 @@
+section.how-works(id="how-works")
+  .container 
+    h2.main-h2 HOW IT WORKS ?
+    .box
+      .image 
+        img(src="image/work-steps.png" alt="work-steps")
+      .content 
+        - var works_img = ["work-steps-1","work-steps-2","work-steps-3"]
+        - var works_head = ["Business Analysis","Architecture","Developement"] 
+        - var works_prag = ["Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel","Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel","Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel"] 
+        - for (var q = 0 ; q < 3; q++)
+          div(class = "item")
+            .img-icon 
+              img(src="image/"+works_img[q]+".png", alt= works_img[q])
+            .text
+              h3 #{works_head[q]}
+              p #{works_prag[q]}

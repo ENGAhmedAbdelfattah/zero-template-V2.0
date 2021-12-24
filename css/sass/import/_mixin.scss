@@ -1,0 +1,165 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+$main-color: #21a3f6;
+$prag-color: #dfe4e8;
+$prag-color2: #777;
+$main-duration: 0.3s;
+$height-header: 72px;
+$main-padding: 100px;
+$main-background: #ececec;
+@mixin center-flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin animate-before-after() {
+  -webkit-animation: move 0.5s 0.3s forwards;
+          animation: move 0.5s 0.3s forwards;
+  @-webkit-keyframes move {
+    0% {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+    }
+    100% {
+      width: 50% + 2;
+      height: 100%;
+      border-radius: 0%;
+    }
+  }
+  @keyframes move {
+    0% {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+    }
+    100% {
+      width: 50% + 2;
+      height: 100%;
+      border-radius: 0%;
+    }
+  }
+}
+
+@mixin item($i, $color) {
+  .item#{$i} {
+    overflow: hidden;
+    $color-item: #{$color}; //- local variable
+    border: 1px solid #cccccc;
+    .image {
+      width: 100%;
+      height: 450px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-color: transparent transparent white transparent;
+        border-style: solid;
+        border-width: 0 0 170px 500px;
+        transition: $main-duration;
+      }
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $color-item;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .content {
+      @include center-flex();
+      flex-direction: column;
+      h3 {
+        flex-direction: column;
+        padding: 15px 20px;
+        font-size: 40px;
+        font-weight: bold;
+        position: relative;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        &::before {
+          content: "";
+          width: calc(100% - 70px);
+          height: 5px;
+          background-color: $color-item;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      p {
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        color: $prag-color2;
+        padding: 20px;
+      }
+    }
+    a {
+      display: flex;
+      @include center-flex();
+      margin: 30px;
+      bottom {
+        border: 3px solid $color-item;
+        border-radius: 5px;
+        padding: 5px 30px;
+        font-size: 16pt;
+        font-weight: bold;
+        color: $color-item;
+        position: relative;
+        z-index: 10;
+        &:before {
+          content: "";
+          width: 0;
+          height: 100% + 6;
+          display: flex;
+          justify-content: stretch;
+          align-items: center;
+          background-color: $color-item;
+          position: absolute;
+          top: -1.5px;
+          left: -1.5px;
+          z-index: -1;
+          transition: color $main-duration, width $main-duration;
+        }
+      }
+    }
+    &:hover {
+      .image {
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          border-color: transparent transparent white transparent;
+          border-style: solid;
+          border-width: 0 500px 200px 0;
+        }
+      }
+      a {
+        bottom {
+          color: white;
+          &:before {
+            width: 100% + 3;
+          }
+        }
+      }
+    }
+  }
+}
+// list of palceholder
+//  %main-h2
+//  %before-after

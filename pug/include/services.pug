@@ -1,0 +1,15 @@
+section.services(id="services")
+  .spikes
+  .container 
+    h2.main-h2 SERVICES
+    .box
+      -var service = ["Security","Fixing Issues","Location","Coding","Security","Marketing"]
+      -var service_icon = ["fas fa-user-shield","fas fa-tools","fas fa-map-marked-alt","fas fa-laptop-code","fas fa-palette","fas fa-bullhorn"]
+      each icon, index in service
+        .item
+          .content 
+            i(class= service_icon[index] + " fa-4x")
+            h3 #{icon}
+          .info 
+            .num
+            a(href="#"): span Details

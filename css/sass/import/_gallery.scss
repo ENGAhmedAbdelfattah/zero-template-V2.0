@@ -1,0 +1,73 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+section.gallery {
+  background-color: $main-background;
+  padding: $main-padding 0;
+  position: relative;
+  z-index: 0;
+  // h2 style in compont scss file
+  .container {
+    .box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      justify-content: space-between;
+      padding-top: $main-padding;
+      .image {
+        @include m.center-flex();
+        border: 15px solid white;
+        overflow: hidden;
+        position: relative;
+        &::before {
+          content: "";
+          width: 0;
+          height: 0;
+          background-color: #ffffff3a;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 10;
+          transform: translate(-50%, -50%);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        &:hover {
+          &::before {
+            -webkit-animation: width-height $main-duration forwards;
+                    animation: width-height $main-duration forwards;
+            @-webkit-keyframes width-height {
+              0% {
+                width: 0;
+                height: 0;
+                transform: translate(-50%, -50%);
+              }
+              100% {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            @keyframes width-height {
+              0% {
+                width: 0;
+                height: 0;
+                transform: translate(-50%, -50%);
+              }
+              100% {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          img {
+            transform: rotate(6deg) scale(1.2);
+            transition: transform $main-duration;
+          }
+        }
+      }
+    }
+  }
+}

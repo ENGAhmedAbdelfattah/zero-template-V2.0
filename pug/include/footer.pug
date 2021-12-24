@@ -1,0 +1,31 @@
+footer
+  .container 
+    .box.info 
+      h2 Elzero
+      .social 
+        i(class="fab fa-facebook-f fa-fw")
+        i(class="fab fa-twitter fa-fw")
+        i(class="fab fa-youtube fa-fw")
+      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus nulla rem, dignissimos iste aspernatur
+    ul.box.link
+      li #[a(href="#") Important Link 1]
+      li #[a(href="#") Important Link 2]
+      li #[a(href="#") Important Link 3]
+      li #[a(href="#") Important Link 4]
+      li #[a(href="#") Important Link 5]
+    .box.address
+      .item
+        i(class="fas fa-map-marker-alt fa-fw")
+        p Egypt, Giza, Inside The Sphinx, Room Number 220
+      .item
+        i(class="far fa-clock fa-fw") 
+        p Business Hours: From 10:00 To 18:00
+      .item
+        i(class="fas fa-phone-volume fa-fw")
+        p +20123456789 #[br]+20198765432
+    .box.image 
+      -for (var i = 1; i <= 6; i++)
+        .item
+          img(src="image/gallery-0" + i +".png" alt="gallery-0" + i)
+  .desginer
+    p="Made With 💖 By Eng.Ahmed Abd El-Fattah"

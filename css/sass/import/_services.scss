@@ -1,0 +1,109 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+section.services {
+  padding: $main-padding 0;
+  background-color: $main-background;
+  position: relative;
+  z-index: 0;
+  .container {
+    .box {
+      padding-top: $main-padding;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        transition: $main-duration;
+        counter-increment: num;
+        &:hover {
+          transform: translateY(-10px);
+          &::before {
+            width: 100%;
+          }
+        }
+        &::before {
+          content: "";
+          width: 0;
+          height: 5px;
+          background-color: $main-color;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -100%);
+          transition: $main-duration;
+        }
+        .content {
+          @include m.center-flex();
+          flex-direction: column;
+          padding: 30px;
+          i {
+            display: block;
+            color: #d5d5d5;
+            font-weight: bold;
+          }
+          h3 {
+            padding: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            color: $main-color;
+          }
+        }
+        .info {
+          @include m.center-flex();
+          justify-content: space-between;
+          height: 50px;
+          background-color: #f9f9f9;
+          position: relative;
+          .num {
+            @include m.center-flex();
+            height: 100%;
+            padding: 10px;
+            padding-right: 40px;
+            background-color: $main-color;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            position: relative;
+            z-index: 0;
+            &::before {
+              content: "";
+              width: 60px;
+              height: 50px;
+              background-color: #d9d9d9;
+              color: white;
+              transform: translateX(100px) skewX(-35deg);
+              position: absolute;
+              top: 0;
+              right: 0;
+              z-index: 2;
+            }
+            &::after {
+              content: counter(num, decimal-leading-zero);
+              width: 100%;
+              height: 50px;
+              padding: 0 30px;
+              background-color: $main-color;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+          a {
+            span {
+              display: block;
+              color: $main-color;
+              padding: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

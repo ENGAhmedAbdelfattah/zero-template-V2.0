@@ -1,0 +1,170 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+section.pricing-plans {
+  padding: $main-padding 0;
+  background-color: $main-background;
+  position: relative;
+  z-index: 0;
+  > img {
+    position: absolute;
+    z-index: -1;
+    &:first-of-type {
+      top: 0;
+      right: 0;
+      transform: translateY(100%);
+    }
+    &:last-of-type {
+      bottom: 0;
+      left: 0;
+      transform: translateY(-100%);
+    }
+  }
+  .container {
+    .box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      justify-content: center;
+      padding-top: $main-padding;
+      .item {
+        position: relative;
+        .popular {
+          @include m.center-flex();
+          justify-content: flex-start;
+          width: 30px;
+          padding: 20px {
+            bottom: 35px;
+          }
+          background-color: $main-color;
+          color: white;
+          font-size: 18px;
+          font-weight: bold;
+          position: absolute;
+          top: 0;
+          right: 20px;
+          -webkit-writing-mode: vertical-lr;
+              -ms-writing-mode: tb-lr;
+                  writing-mode: vertical-lr;
+          &::after {
+            content: "";
+            width: 0;
+            border: {
+              width: 20px;
+              style: solid;
+              color: transparent transparent white transparent;
+            }
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+        @include m.center-flex();
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px rgb(0 0 0 / 12%);
+        transition: $main-duration;
+        position: relative;
+        &:nth-child(2) {
+          transform: translateY(-20px);
+          @media (max-width: 991.98px) {
+            transform: translateY(0);
+          }
+        }
+        &:hover {
+          &::before,
+          &::after {
+            width: 100%;
+          }
+        }
+        z-index: 1;
+        &::before,
+        &::after {
+          content: "";
+          width: 0;
+          height: 50%;
+          background-color: #f6f6f6;
+          position: absolute;
+          z-index: -1;
+          transition: $main-duration;
+        }
+        &::before {
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          bottom: 0;
+          right: 0;
+        }
+        .content {
+          @include m.center-flex();
+          flex-direction: column;
+          padding: 30px;
+          h3 {
+            font-size: 25px;
+            font-weight: 700;
+            padding-bottom: 20px;
+          }
+          .image {
+            width: 80px;
+            height: 80px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          p {
+            font-size: 60px;
+            font-weight: bold;
+            color: $main-color;
+            line-height: 1;
+            padding: 35px 0 8px;
+          }
+          span {
+            display: block;
+            padding: 2px;
+            font-size: 16px;
+            font-weight: 400;
+            color: $prag-color2;
+          }
+        }
+        ul {
+          width: 100%;
+          @include m.center-flex();
+          align-items: flex-start;
+          flex-direction: column;
+          li {
+            width: 100%;
+            padding: 15px;
+            border-top: 1px solid #eee;
+            font-size: 16px;
+            font-weight: 400;
+            &::before {
+              font-family: "Font Awesome 5 Free";
+              content: "\f00c";
+              font-weight: bold;
+              color: $main-color;
+              padding: 10px;
+            }
+          }
+        }
+        button {
+          font-size: 16px;
+          font-weight: bold;
+          border: 2px solid #1787e0;
+          border-radius: 6px;
+          padding: 15px 20px;
+          margin: 40px;
+          background-color: transparent;
+          transition: $main-duration;
+          z-index: 0;
+          &:hover {
+            background-color: #1787e0;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+header 
+  .container 
+    .logo
+      a(href="index.html") Ahmed El-Mondy
+    -var listheader = ["articles", "gallery", "features", "other links"]
+    -var idlist0 = ["articles", "gallery", "features", "otherlinks"]
+    ul
+      each item in listheader
+        if z == False
+          -var z = 0
+        if item != listheader[3]
+          if z <= 2
+          li: a(href = "#" + idlist0[z]) #{item}
+        else
+          li
+            a(href = "#" + idlist0[3]) #{item}
+            ul.mega-menu
+              img(src="image/megamenu.png" alt="megamenu")
+              -var mega_icon1 = ["fas fa-comments","fas fa-user","far fa-building","far fa-check-circle","far fa-clipboard"]
+              -var maga_menu1 = [ "Testimonials", "Team Members", "Services", "Our Skills", "How It Works"]
+              -var id_List1 = ["testimonials","teammembers","services","our-skills","how-works"]
+              ul
+                +icon-list(mega_icon1,maga_menu1,id_List1)
+              -var mega_icon2 = ["far fa-calendar-alt","fas fa-server","far fa-play-circle","far fa-chart-bar","fas fa-percent"]
+              -var maga_menu2 = ["Events", "Pricing Plans", "Top Videos", "Stats", "Request A Discount"]
+              -var id_List2 = ["events","pricingplans","topvideos","stats","discount"]
+              ul
+                +icon-list(mega_icon2,maga_menu2,id_List2)
+        -var z = z + 1

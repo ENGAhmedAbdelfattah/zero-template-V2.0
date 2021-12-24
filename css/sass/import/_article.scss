@@ -1,0 +1,83 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+section.articles {
+  position: relative;
+  .container {
+    .box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      justify-content: space-between;
+      margin-top: 100px;
+      padding: $main-padding 0;
+      .item {
+        overflow: hidden;
+        padding: 0;
+        border-radius: 6px;
+        transition: transform $main-duration, box-shadow $main-duration;
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+          .more {
+            i {
+              -webkit-animation: move-arrow-little 0.8s linear 0s infinite;
+                      animation: move-arrow-little 0.8s linear 0s infinite;
+              @-webkit-keyframes move-arrow-little {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(8px);
+                }
+              }
+              @keyframes move-arrow-little {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(8px);
+                }
+              }
+            }
+          }
+        }
+        .image {
+          width: 100%;
+          height: 160px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .text {
+          padding: 20px;
+          h3 {
+            font-weight: 700;
+          }
+          p {
+            color: #777;
+          }
+        }
+        .more {
+          display: flex;
+          border-top: 1px solid #e6e6e7;
+          align-items: center;
+          padding: 15px;
+          a {
+            display: block;
+            font-weight: bold;
+            color: $main-color;
+            letter-spacing: -1px;
+            flex: 1;
+          }
+          i {
+            color: $main-color;
+            font-weight:bold;
+          }
+        }
+      }
+    }
+  }
+}
