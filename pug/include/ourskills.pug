@@ -6,8 +6,10 @@ section.our-skills(id="our-skills")
         img(src="image/skills.png" alt="skills")
       .content 
         -var head_skills = ["HTML", "CSS", "JavaScript", "Python"]
-        - for (var q = 1 ; q <= 4; q++)
+        -var width_data = ["80%","85%","70%","80%"] 
+        - for (var q = 1 ; q <= head_skills.length; q++)
           -var d = q - 1
           div(class = "item" + q)
             h3 #{head_skills[d]}
-            .rang
+            div(class="rang" )
+              div(class="rang-width" data-width= width_data[q - 1])

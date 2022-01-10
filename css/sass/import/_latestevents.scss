@@ -50,6 +50,7 @@ section.latest-events {
           gap: 10px;
           margin: 25px;
           .data {
+            min-width: 80px;
             border: 1px solid #dcdcdc;
             border-radius: 5px;
             transition: $main-duration;
@@ -60,7 +61,7 @@ section.latest-events {
               }
             }
             p {
-              padding: 15px;
+              padding: 15px 0;
               font-size: 35px;
               font-weight: bold;
               color: $main-color;
@@ -68,7 +69,7 @@ section.latest-events {
             }
             span {
               display: block;
-              padding: 2px 18px;
+              padding: 2px 0;
               border-top: 1px solid #dcdcdc;
               font-size: 13px;
               transition: $main-duration;

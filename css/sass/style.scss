@@ -62,8 +62,9 @@ $main-background: #ececec;
 }
 
 ::selection {
-  background-color: rgb(170, 170, 170);
-  color: white;
+  background-color: rgba(170, 170, 170, 0.274);
+  color: rgb(0, 26, 255);
+  // background-color: transparent;
 }
 html {
   scrollbar-color: blue cyan;

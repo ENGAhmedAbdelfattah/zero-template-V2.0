@@ -8,5 +8,5 @@ section.our-awesome-stats(id="stats")
       - for (g=0 ; g < stats_span.length ; g ++)
         .item
           i(class= stats_icon[g] + " "+ "fa-2x fa-fw" )
-          p #{stats_num[g]}
+          p(data-num = stats_num[g]) 0
           span #{stats_span[g]}

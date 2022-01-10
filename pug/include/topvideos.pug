@@ -9,12 +9,12 @@ section.top-videos(id="topvideos")
         .box-item
           -var video_pra = ["How To Create Sub Domain", "Playing With The DNS", "Everything About The Virtual Hosts", "How To Monitor Your Website", "Uncharted Beating The Last Boss", "Ys Oath In Felghana Overview", "Ys Series All Games Ending"]
           -var video_time = ["05:18", "03:18", "05:25", "04:16", "07:48", "03:12", "08:10"]
-          -for (var h = 0 ; h < video_pra.length ; h ++)
-            ul.item
-              li
+          -var src_list = ["https://www.youtube.com/embed/olfzH4VYQQs", "https://www.youtube.com/embed/5wpp3vFM41U", "https://www.youtube.com/embed/p8Y0u9vey6E", "https://www.youtube.com/embed/zHCRPLo9tns", "https://www.youtube.com/embed/hu5e7KiKtkw", "https://www.youtube.com/embed/8l3Cx9xLDno", "https://www.youtube.com/embed/P9o_YTsuEwk"]
+          ul
+            -for (var h = 0 ; h < video_pra.length ; h ++)
+              li.item(data-src= src_list[h])
                 p #{video_pra[h]}
                 time #{video_time[h]}
       .video
-        .image 
-          img(src="image/video-preview.jpg" alt="work-steps")
-        p Everything About The Virtual Hosts
+        iframe(width="560", height="315", src="https://www.youtube.com/embed/olfzH4VYQQs", title= "#{video_pra[0]}", picture-in-picture, allowfullscreen, enablejsapi=1)
+        p #{video_pra[0]}

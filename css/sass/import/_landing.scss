@@ -112,45 +112,70 @@ section.landing {
 
       @-webkit-keyframes up-down-2 {
         0% {
-          transform: translate(0, 0);
+          transform: translateY(0);
         }
 
         50% {
-          transform: translate(0, 20px);
+          transform: translateY(20px);
         }
 
         75% {
-          transform: translate(0, 10px);
+          transform: translateY(10px);
         }
 
         100% {
-          transform: translate(0, 20px);
+          transform: translateY(20px);
         }
       }
 
       @keyframes up-down-2 {
         0% {
-          transform: translate(0, 0);
+          transform: translateY(0);
         }
 
         50% {
-          transform: translate(0, 20px);
+          transform: translateY(20px);
         }
 
         75% {
-          transform: translate(0, 10px);
+          transform: translateY(10px);
         }
 
         100% {
-          transform: translate(0, 20px);
+          transform: translateY(20px);
         }
       }
 
       i {
-        position: absolute;
         color: $main-color;
         font-weight: bold;
       }
     }
+  }
+}
+
+.up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: rgb(0, 119, 255);
+  position: fixed;
+  right: -50px;
+  bottom: 15px;
+  z-index: 5;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.301) inset, 0 0 15px 3px rgba(0, 0, 0, 0.322);
+  transition: right 0.3s, transform 2s;
+  transform: rotate(0);
+  &.show {
+    right: 15px;
+    transform: rotate(360deg);
+  }
+  i {
+    color: white;
   }
 }

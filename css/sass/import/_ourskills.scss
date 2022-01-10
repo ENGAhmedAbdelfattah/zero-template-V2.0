@@ -36,14 +36,15 @@ section.our-skills {
               height: 30px;
               background-color: #eeeeee;
               position: relative;
-              &::before {
+              .rang-width {
                 content: "";
-                width: $val;
+                width: 0;
                 height: 100%;
                 background-color: $main-color;
                 position: absolute;
                 top: 0;
                 left: 0;
+                transition: width 3s;
               }
               &::after {
                 content: "#{$val}";

@@ -56,6 +56,7 @@
         <div class="icon"><a href="#articles"><i class="fas fa-angle-double-down fa-2x"></i></a></div>
       </div>
     </section>
+    <div class="up"><a href="#"><i class="fas fa-arrow-up"></i></a> </div>
     <section class="articles" id="articles">
       <div class="container"> 
         <h2 class="main-h2">ARTICLES</h2>
@@ -392,19 +393,27 @@
           <div class="content"> 
             <div class="item1">
               <h3>HTML</h3>
-              <div class="rang"></div>
+              <div class="rang">
+                <div class="rang-width" data-width="80%"></div>
+              </div>
             </div>
             <div class="item2">
               <h3>CSS</h3>
-              <div class="rang"></div>
+              <div class="rang">
+                <div class="rang-width" data-width="85%"></div>
+              </div>
             </div>
             <div class="item3">
               <h3>JavaScript</h3>
-              <div class="rang"></div>
+              <div class="rang">
+                <div class="rang-width" data-width="70%"></div>
+              </div>
             </div>
             <div class="item4">
               <h3>Python</h3>
-              <div class="rang"></div>
+              <div class="rang">
+                <div class="rang-width" data-width="80%"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -449,16 +458,16 @@
           <div class="content">
             <div class="time">
               <div class="data">
-                <p>34</p><span>Days</span>
+                <p>000</p><span>Days</span>
               </div>
               <div class="data">
-                <p>12</p><span>Hours</span>
+                <p>00</p><span>Hours</span>
               </div>
               <div class="data">
-                <p>52</p><span>Minutes</span>
+                <p>00</p><span>Minutes</span>
               </div>
               <div class="data">
-                <p>24</p><span>Seconds</span>
+                <p>00</p><span>Seconds</span>
               </div>
             </div>
             <h3>Tech Masters Event 2021</h3>
@@ -533,44 +542,32 @@
               <h3>Top Videos</h3><i class="fas fa-random"></i>
             </div>
             <div class="box-item">
-              <ul class="item">
-                <li>
+              <ul>
+                <li class="item" data-src="https://www.youtube.com/embed/olfzH4VYQQs">
                   <p>How To Create Sub Domain</p>
                   <time>05:18</time>
                 </li>
-              </ul>
-              <ul class="item">
-                <li>
+                <li class="item" data-src="https://www.youtube.com/embed/5wpp3vFM41U">
                   <p>Playing With The DNS</p>
                   <time>03:18</time>
                 </li>
-              </ul>
-              <ul class="item">
-                <li>
+                <li class="item" data-src="https://www.youtube.com/embed/p8Y0u9vey6E">
                   <p>Everything About The Virtual Hosts</p>
                   <time>05:25</time>
                 </li>
-              </ul>
-              <ul class="item">
-                <li>
+                <li class="item" data-src="https://www.youtube.com/embed/zHCRPLo9tns">
                   <p>How To Monitor Your Website</p>
                   <time>04:16</time>
                 </li>
-              </ul>
-              <ul class="item">
-                <li>
+                <li class="item" data-src="https://www.youtube.com/embed/hu5e7KiKtkw">
                   <p>Uncharted Beating The Last Boss</p>
                   <time>07:48</time>
                 </li>
-              </ul>
-              <ul class="item">
-                <li>
+                <li class="item" data-src="https://www.youtube.com/embed/8l3Cx9xLDno">
                   <p>Ys Oath In Felghana Overview</p>
                   <time>03:12</time>
                 </li>
-              </ul>
-              <ul class="item">
-                <li>
+                <li class="item" data-src="https://www.youtube.com/embed/P9o_YTsuEwk">
                   <p>Ys Series All Games Ending</p>
                   <time>08:10</time>
                 </li>
@@ -578,8 +575,8 @@
             </div>
           </div>
           <div class="video">
-            <div class="image"> <img src="image/video-preview.jpg" alt="work-steps"></div>
-            <p>Everything About The Virtual Hosts</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/olfzH4VYQQs" title="#{video_pra[0]}" picture-in-picture allowfullscreen enablejsapi="1"></iframe>
+            <p>How To Create Sub Domain</p>
           </div>
         </div>
       </div>
@@ -589,16 +586,16 @@
         <h2>Our Awesome Stats</h2>
         <div class="box">
           <div class="item"><i class="far fa-user fa-2x fa-fw"></i>
-            <p>150</p><span>Clients</span>
+            <p data-num="150">0</p><span>Clients</span>
           </div>
           <div class="item"><i class="fas fa-code fa-2x fa-fw"></i>
-            <p>135</p><span>Projects</span>
+            <p data-num="135">0</p><span>Projects</span>
           </div>
           <div class="item"><i class="fas fa-globe-asia fa-2x fa-fw"></i>
-            <p>50</p><span>Countries</span>
+            <p data-num="50">0</p><span>Countries</span>
           </div>
           <div class="item"><i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-            <p>500</p><span>Money</span>
+            <p data-num="500">0</p><span>Money</span>
           </div>
         </div>
       </div>
@@ -660,5 +657,6 @@
         <p>Made With 💖 By Eng.Ahmed Abd El-Fattah</p>
       </div>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
