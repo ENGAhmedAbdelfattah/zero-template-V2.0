@@ -94,7 +94,6 @@ let boxEle = document.querySelector("section.top-videos .container .box");
 
 videoItemEles.forEach(function (el) {
   el.addEventListener("click", function (e) {
-    console.log(el.classList);
     videoItemEles.forEach((element) =>
       element.classList.remove("video-active")
     );
