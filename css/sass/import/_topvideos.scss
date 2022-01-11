@@ -59,6 +59,9 @@ section.top-videos {
                 color: $main-color;
               }
             }
+            &.video-active {
+              background-color: rgba(238, 238, 238, 0.452);
+            }
             p,
             time {
               font-size: 15px;

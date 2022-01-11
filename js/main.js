@@ -93,15 +93,19 @@ newOpencontentEle.classList.add("open", "fas", "fa-random");
 let boxEle = document.querySelector("section.top-videos .container .box");
 
 videoItemEles.forEach(function (el) {
-  el.addEventListener("click", function () {
+  el.addEventListener("click", function (e) {
+    console.log(el.classList);
+    videoItemEles.forEach((element) =>
+      element.classList.remove("video-active")
+    );
+    e.currentTarget.classList.add("video-active");
     setTimeout(() => (iframeEle.src = el.dataset.src + "?autoplay=1"), 200);
-    console.log(el.children[0]);
     iframeEle.title = el.children[0].textContent;
     videoDescrEle.textContent = el.children[0].textContent;
   });
 });
 
-closeContentEle.addEventListener("click", function () {
+closeContentEle.addEventListener("click", function (e) {
   contentEle.style.display = "none";
   newOpencontentEle.style.display = "flex";
   boxEle.prepend(newOpencontentEle);
@@ -112,5 +116,3 @@ newOpencontentEle.addEventListener("click", function (e) {
   contentEle.style.display = "block";
   boxEle.style.borderWidth = "1px";
 });
-
-

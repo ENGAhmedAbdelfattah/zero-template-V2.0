@@ -2447,6 +2447,9 @@ section.top-videos .container .box .content .box-item li.item:hover {
 section.top-videos .container .box .content .box-item li.item:hover p {
   color: #21a3f6;
 }
+section.top-videos .container .box .content .box-item li.item.video-active {
+  background-color: rgba(238, 238, 238, 0.452);
+}
 section.top-videos .container .box .content .box-item li.item p,
 section.top-videos .container .box .content .box-item li.item time {
   font-size: 15px;
