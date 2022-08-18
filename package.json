@@ -1,0 +1,19 @@
+{
+  "name": "zero-template-v2.0",
+  "version": "1.0.0",
+  "description": "My site is published at https://ahmed-endless.github.io/zero-template-V2.0/",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmed-ENDless/zero-template-V2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmed-ENDless/zero-template-V2.0/issues"
+  },
+  "homepage": "https://github.com/ahmed-ENDless/zero-template-V2.0#readme"
+}
