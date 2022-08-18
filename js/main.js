@@ -124,5 +124,4 @@ function openHandle(e) {
   boxEle.style.borderWidth = "1px";
 }
 
-
-module.exports = [];
+module.exports = [upHandle, scrollbarHandle, statsHandle, closeHandle, openHandle];
