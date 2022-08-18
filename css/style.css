@@ -138,7 +138,7 @@
 }
 
 ::-webkit-scrollbar-button:single-button {
-  background-color: #0ac6cc;
+  background-color: rgb(10, 198, 204);
   border: 3px solid blue;
   height: 10px;
   width: 10px;
@@ -151,7 +151,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: blue;
   border-radius: 20px;
-  border: 1px solid #510564;
+  border: 1px solid rgb(81, 5, 100);
 }
 
 ::-webkit-scrollbar-track {
@@ -160,18 +160,18 @@
 }
 
 ::-webkit-scrollbar-track:hover {
-  background-color: #00aeff;
+  background-color: rgb(0, 174, 255);
 }
 
 ::-webkit-resizer {
-  background-image: linear-gradient(315deg, #21a3f6 25%, #00aeff 25%, #00aeff 30%, #00e1ff 30%, #00e1ff 40%, #00fff2 40%, #00fff2 50%, transparent 50%);
+  background-image: linear-gradient(315deg, #21a3f6 25%, rgb(0, 174, 255) 25%, rgb(0, 174, 255) 30%, rgb(0, 225, 255) 30%, rgb(0, 225, 255) 40%, rgb(0, 255, 242) 40%, rgb(0, 255, 242) 50%, transparent 50%);
   width: 1px;
   height: 1px;
 }
 
 ::selection {
   background-color: rgba(170, 170, 170, 0.274);
-  color: #001aff;
+  color: rgb(0, 26, 255);
 }
 
 html {
@@ -597,7 +597,7 @@ section.landing .container .icon i {
   width: 45px;
   height: 45px;
   border-radius: 10px;
-  background-color: #0077ff;
+  background-color: rgb(0, 119, 255);
   position: fixed;
   right: -50px;
   bottom: 15px;
@@ -611,6 +611,12 @@ section.landing .container .icon i {
 .up.show {
   right: 15px;
   transform: rotate(360deg);
+}
+@media (max-width: 767.98px) {
+  .up.show {
+    right: 50px;
+    transform: rotate(360deg);
+  }
 }
 .up i {
   color: white;
@@ -725,7 +731,7 @@ section.gallery .container .box .image::before {
   content: "";
   width: 0;
   height: 0;
-  background-color: #ffffff3a;
+  background-color: rgba(255, 255, 255, 0.2274509804);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1168,10 +1174,8 @@ section.testimonials .container .box .item1 .content {
   line-clamp: 5;
   -webkit-box-orient: vertical;
   box-orient: vertical;
-  line-height: 16px;
-  /* Height taken by one line */
-  max-height: 230px;
-  /* (Number of lines you want visible) * (line-height) */
+  line-height: 16px; /* Height taken by one line */
+  max-height: 230px; /* (Number of lines you want visible) * (line-height) */
 }
 section.testimonials .container .box .item1 .content h3 {
   font-size: 19px;
@@ -1225,10 +1229,8 @@ section.testimonials .container .box .item2 .content {
   line-clamp: 5;
   -webkit-box-orient: vertical;
   box-orient: vertical;
-  line-height: 16px;
-  /* Height taken by one line */
-  max-height: 230px;
-  /* (Number of lines you want visible) * (line-height) */
+  line-height: 16px; /* Height taken by one line */
+  max-height: 230px; /* (Number of lines you want visible) * (line-height) */
 }
 section.testimonials .container .box .item2 .content h3 {
   font-size: 19px;
@@ -1282,10 +1284,8 @@ section.testimonials .container .box .item3 .content {
   line-clamp: 5;
   -webkit-box-orient: vertical;
   box-orient: vertical;
-  line-height: 16px;
-  /* Height taken by one line */
-  max-height: 230px;
-  /* (Number of lines you want visible) * (line-height) */
+  line-height: 16px; /* Height taken by one line */
+  max-height: 230px; /* (Number of lines you want visible) * (line-height) */
 }
 section.testimonials .container .box .item3 .content h3 {
   font-size: 19px;
@@ -1339,10 +1339,8 @@ section.testimonials .container .box .item4 .content {
   line-clamp: 5;
   -webkit-box-orient: vertical;
   box-orient: vertical;
-  line-height: 16px;
-  /* Height taken by one line */
-  max-height: 230px;
-  /* (Number of lines you want visible) * (line-height) */
+  line-height: 16px; /* Height taken by one line */
+  max-height: 230px; /* (Number of lines you want visible) * (line-height) */
 }
 section.testimonials .container .box .item4 .content h3 {
   font-size: 19px;
@@ -1396,10 +1394,8 @@ section.testimonials .container .box .item5 .content {
   line-clamp: 5;
   -webkit-box-orient: vertical;
   box-orient: vertical;
-  line-height: 16px;
-  /* Height taken by one line */
-  max-height: 230px;
-  /* (Number of lines you want visible) * (line-height) */
+  line-height: 16px; /* Height taken by one line */
+  max-height: 230px; /* (Number of lines you want visible) * (line-height) */
 }
 section.testimonials .container .box .item5 .content h3 {
   font-size: 19px;
@@ -1453,10 +1449,8 @@ section.testimonials .container .box .item6 .content {
   line-clamp: 5;
   -webkit-box-orient: vertical;
   box-orient: vertical;
-  line-height: 16px;
-  /* Height taken by one line */
-  max-height: 230px;
-  /* (Number of lines you want visible) * (line-height) */
+  line-height: 16px; /* Height taken by one line */
+  max-height: 230px; /* (Number of lines you want visible) * (line-height) */
 }
 section.testimonials .container .box .item6 .content h3 {
   font-size: 19px;
@@ -2769,7 +2763,7 @@ section.discount form .content textarea {
  */
 footer {
   background-color: #191919;
-  color: #b9b9b4;
+  color: rgb(185, 185, 180);
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -2845,7 +2839,7 @@ footer .container .box.link li a {
   display: block;
   width: 100%;
   font-size: 16px;
-  color: #b9b9b4;
+  color: rgb(185, 185, 180);
   transition: 0.3s;
 }
 footer .container .box.link li a:hover {
