@@ -53,7 +53,7 @@ function statsHandle() {
 let countElse = document.querySelectorAll(
   "section.latest-events .container .box .content .time .data p"
 );
-let finaleDate = new Date("Dec 31, 2022 23:59:59").getTime();
+let finaleDate = new Date("Dec 31, 2023 23:59:59").getTime();
 
 let counter = setInterval(function () {
   let dateNow = new Date().getTime();
