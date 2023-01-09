@@ -269,7 +269,7 @@ header .container .logo a {
     width: 0;
   }
   80%, 100% {
-    width: 14ch;
+    width: 18ch;
   }
 }
 header .container .logo a:hover {
